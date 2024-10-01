@@ -17,8 +17,7 @@ main = gg.choice({
     "💙Always get bomb💙",
     "💙Money Hack💙",
     "🛡️AntiBan🛡️",
-	"⭐Skinchanger⭐",
-	"Exit",
+    "Exit",
 	},nil, "script by @qwas_228")
 	
     if main == 1 then dmg() end	
@@ -33,7 +32,7 @@ main = gg.choice({
     if main == 10 then fastdef() end
     if main == 11 then money() end
     if main == 12 then antiban() end
-    if main == 14  then exit() end
+    if main == 13  then exit() end
 	end
 	
   function antiban() 
