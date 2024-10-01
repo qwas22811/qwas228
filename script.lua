@@ -5,8 +5,8 @@ function menu()
 active = 0
 
 main = gg.choice({
-	"💙Damage Hack💙",
-	"💙Move Before Time💙",
+    "💙Damage Hack💙",
+    "💙Move Before Time💙",
     "💙Team RadarHack💙",
     "💙Air Jump💙",
     "💙No Recoil💙",
@@ -21,8 +21,8 @@ main = gg.choice({
 	"Exit",
 	},nil, "script by @qwas_228")
 	
-	if main == 1 then dmg() end
-	if main == 2 then mbt() end
+    if main == 1 then dmg() end	
+    if main == 2 then mbt() end
     if main == 3 then radar() end
     if main == 4 then airj() end
     if main == 5 then norecoil() end
@@ -33,8 +33,7 @@ main = gg.choice({
     if main == 10 then fastdef() end
     if main == 11 then money() end
     if main == 12 then antiban() end
-	if main == 13 then skins() end
-	if main == 14  then exit() end
+    if main == 14  then exit() end
 	end
 	
   function antiban() 
@@ -208,18 +207,6 @@ Var #7DE8D7F100|7de8d7f100|4|f9000ffed65f03c0|0|0|0|0|r-xp|/data/app/~~q_aRXgi2q
 
 function exit()
 os.exit()
-end
-
-function skins()
-    local filePath = "/sdcard/skinchanger.lua"
-    local file = io.open(filePath, "r")
-    if file then
-        local content = file:read("*all")
-        file:close()  
-        assert(load(content))()
-    else
-        gg.alert("⛔Это фунция только для @qwas_228⛔: " .. filePath)
-    end
 end
 
 while true do
