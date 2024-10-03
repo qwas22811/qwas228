@@ -1,8 +1,6 @@
 active = 1
 
-function menu()
-	
-antiban()
+function menu()	
 	
 active = 0
 
