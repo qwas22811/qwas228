@@ -16,6 +16,7 @@ main = gg.choice({
     "💙Fast Defuse💙",
     "💙Always get bomb💙",
     "💙Money Hack💙",
+    "💙Respawn Hack💙",
     "🛡️AntiBan🛡️",
     "Exit",
 	},nil, "script by @qwas_228")
@@ -31,9 +32,10 @@ main = gg.choice({
     if main == 9 then ctbomb() end
     if main == 10 then fastdef() end
     if main == 11 then money() end
-    if main == 12 then antiban() end
-    if main == 13  then exit() end
-	end
+    if main == 12 then resp() end
+    if main == 13 then antiban() end
+    if main == 14  then exit() end
+    end
 	
   function antiban() 
     io.open("/sdcard/qwas","w+"):write([[
@@ -203,6 +205,20 @@ Var #7DE8D7F100|7de8d7f100|4|f9000ffed65f03c0|0|0|0|0|r-xp|/data/app/~~q_aRXgi2q
             io.open("/sdcard/qwas","w+"):close()
             gg.toast("Activated") 
             end
+
+function resp()
+io.open("/sdcard/qwas","w+"):write([[
+                         18474
+Var #766C3927BC|766c3927bc|4|52800020|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|86c7bc
+Var #766C3927C0|766c3927c0|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|86c7c0
+
+                        ]]):close()
+                        gg.loadList("/sdcard/qwas", gg.LOAD_VALUES)
+                        gg.clearList()
+                        io.open("/sdcard/qwas","w+"):close()
+                        gg.toast("Activated")
+                        end
+                        
 
 function exit()
 os.exit()
