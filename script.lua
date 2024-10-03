@@ -1,3 +1,5 @@
+antiban()
+
 active = 1
 
 function menu()
