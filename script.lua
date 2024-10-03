@@ -1,9 +1,9 @@
-antiban()
-
 active = 1
 
 function menu()
-
+	
+antiban()
+	
 active = 0
 
 main = gg.choice({
