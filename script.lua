@@ -17,6 +17,8 @@ main = gg.choice({
     "💙Always get bomb💙",
     "💙Money Hack💙",
     "💙Respawn Hack💙",
+    "💙Fire Rate💙",
+    "💙Infinity Ammo💙",
     "🛡️AntiBan🛡️",
     "Exit",
 	},nil, "script by @qwas_228")
@@ -33,8 +35,10 @@ main = gg.choice({
     if main == 10 then fastdef() end
     if main == 11 then money() end
     if main == 12 then resp() end
-    if main == 13 then antiban() end
-    if main == 14  then exit() end
+    if main == 13 then firer() end
+    if main == 14 then infam() end
+    if main == 15 then antiban() end
+    if main == 16  then exit() end
     end
 	
   function antiban() 
@@ -218,7 +222,32 @@ Var #766C3927C0|766c3927c0|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gF
                         io.open("/sdcard/qwas","w+"):close()
                         gg.toast("Activated")
                         end
-                        
+
+function firer()
+io.open("/sdcard/qwas","w+"):write([[
+                         30742
+Var #766BD08EC8|766bd08ec8|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|674ec8
+
+                        ]]):close()
+                        gg.loadList("/sdcard/qwas", gg.LOAD_VALUES)
+                        gg.clearList()
+                        io.open("/sdcard/qwas","w+"):close()
+                        gg.toast("Activated")
+end                      
+
+function infam()
+io.open("/sdcard/qwas","w+"):write([[
+                         30742
+Var #766C01B308|766c01b308|4|52800020|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|987308
+Var #766C01B30C|766c01b30c|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|98730c
+
+
+                        ]]):close()
+                        gg.loadList("/sdcard/qwas", gg.LOAD_VALUES)
+                        gg.clearList()
+                        io.open("/sdcard/qwas","w+"):close()
+                        gg.toast("Activated")
+end
 
 function exit()
 os.exit()
