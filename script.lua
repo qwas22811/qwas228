@@ -256,17 +256,7 @@ Var #766C01B30C|766c01b30c|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gF
 end
 
 function donr()
-io.open("/sdcard/qwas","w+"):write([[
-                        11775
-Var #7882C106C4|7882c106c4|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|5bd6c4
-Var #7882C106C8|7882c106c8|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|5bd6c8
-
-
-                        ]]):close()
-                        gg.loadList("/sdcard/qwas", gg.LOAD_VALUES)
-                        gg.clearList()
-                        io.open("/sdcard/qwas","w+"):close()
-                        gg.toast("Activated")
+gg.alert("временно не доступено")
 end  
 
 function ghost()
@@ -285,20 +275,7 @@ Var #788295975C|788295975c|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gF
 end                     
 
 function infgren()
-io.open("/sdcard/qwas","w+"):write([[
-
-20852
-Var #785D5AD4A8|785d5ad4a8|4|52800020|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|9874a8
-Var #785D5AD4AC|785d5ad4ac|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|9874ac
-
-
-
-
-                        ]]):close()
-                        gg.loadList("/sdcard/qwas", gg.LOAD_VALUES)
-                        gg.clearList()
-                        io.open("/sdcard/qwas","w+"):close()
-                        gg.toast("Activated")
+gg.alert("временно не доступно")
 end                      
 
 function exit()
