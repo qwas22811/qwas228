@@ -42,7 +42,7 @@ main = gg.choice({
     if main == 14 then infam() end
     if main == 15 then ghost() end
     if main == 16 then dontres() end
-    if main == 17 then indgren() end
+    if main == 17 then infgren() end
     if main == 18 then antiban() end
     if main == 19  then exit() end
     end
@@ -283,9 +283,19 @@ Var #788295975C|788295975c|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gF
                         gg.toast("Activated")
 end                     
 
-function infgren()
-gg.alert("временно не доступно")
-end                      
+function infgren() 
+    io.open("/sdcard/qwas","w+"):write([[
+       2913
+Var #785D5944A8|785d5944a8|4|52800020|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|9874a8
+Var #785D5944AC|785d5944ac|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|9874ac
+
+
+    ]]):close()
+    gg.loadList("/sdcard/qwas", gg.LOAD_VALUES)
+    gg.clearList()
+    io.open("/sdcard/qwas","w+"):close()
+    gg.toast("Activated") 
+end
 
 function exit()
 os.exit()
