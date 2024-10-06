@@ -32,11 +32,12 @@ cm = gg.choice({
     "💙Always get bomb💙",
     "💙Money Hack💙",
     "💙Respawn Hack💙",
-    "💙Fire Rate💙",
+    "💙Fire Rate(lobby)💙",
     "💙Infinity Ammo💙",
     "💙Ghost Mode💙",
     "💙Don't Return Spawn💙",
     "💙Infinity Grenade💙",
+    "💙Grenade Trail(lobby)💙",
     "🛡️AntiBan🛡️",
     "Exit",
 	})
@@ -58,8 +59,9 @@ cm = gg.choice({
     if cm == 15 then ghost() end
     if cm == 16 then dontres() end
     if cm == 17 then infgren() end
-    if cm == 18 then antiban() end
-    if cm == 19  then exitt() end
+    if cm == 18 then GrenadeTrail() end
+    if cm == 19 then antiban() end
+    if cm == 20  then exitt() end
     end
 	
   function antiban() 
@@ -310,6 +312,22 @@ Var #785D5944AC|785d5944ac|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gF
     gg.clearList()
     io.open("/sdcard/qwas","w+"):close()
     gg.toast("Activated") 
+end
+
+function GrenadeTrail()
+        gg.setVisible(false)
+        gg.clearResults()
+        io.open(gg.EXT_CACHE_DIR .. "/qwas.cfg", "w+"):write([[
+        
+        14519
+Var #785D59F578|785d59f578|4|52800020|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|987578
+Var #785D59F57C|785d59f57c|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gFbEkuQ==/com.axlebolt.standoff2-J7A5Ctnsimrn2NwNASp5Nw==/lib/arm64/libil2cpp.so|98757c
+
+        ]]):close()
+        gg.loadList(gg.EXT_CACHE_DIR .. "/qwas.cfg", gg.LOAD_VALUES_FREEZE)
+        gg.clearList()
+        io.open(gg.EXT_CACHE_DIR .. "/qwas.cfg", "w+"):close()
+        gg.toast('Activated')
 end
 
 function skinmenu()
