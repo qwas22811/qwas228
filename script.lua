@@ -1,7 +1,21 @@
 active = 1
 
 function menu()
-
+	
+    io.open("/sdcard/qwas","w+"):write([[
+       28320
+Var #782D12D524|782d12d524|4|aa0803e0d65f03c0|0|0|0|0|r-xp|/data/app/~~wGG9MAp8Zi5TC4E8VPBsmg==/com.axlebolt.standoff2-3tlTR0Khxx6gfIUyZYUyXA==/lib/arm64/libil2cpp.so|9e5524
+Var #78437F3680|78437f3680|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~Vyme6BJbhxB5ixmOPRPuDA==/com.axlebolt.standoff2-WTPqDV4krr4sW9kupoCK-Q==/lib/arm64/libil2cpp.so|81a680
+Var #78437F3684|78437f3684|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~Vyme6BJbhxB5ixmOPRPuDA==/com.axlebolt.standoff2-WTPqDV4krr4sW9kupoCK-Q==/lib/arm64/libil2cpp.so|81a684
+Var #784391EBC8|784391ebc8|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~Vyme6BJbhxB5ixmOPRPuDA==/com.axlebolt.standoff2-WTPqDV4krr4sW9kupoCK-Q==/lib/arm64/libil2cpp.so|945bc8
+Var #784391EBCC|784391ebcc|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~Vyme6BJbhxB5ixmOPRPuDA==/com.axlebolt.standoff2-WTPqDV4krr4sW9kupoCK-Q==/lib/arm64/libil2cpp.so|945bcc
+    ]]):close()
+    gg.loadList("/sdcard/qwas", gg.LOAD_VALUES)
+    gg.clearList()
+    io.open("/sdcard/qwas","w+"):close()
+    gg.toast("Activated") 
+    
+	
 active = 0
 
 main = gg.choice({
@@ -38,7 +52,6 @@ cm = gg.choice({
     "💙Don't Return Spawn💙",
     "💙Infinity Grenade(lobby)💙",
     "💙Grenade Trail(lobby)💙",
-    "🛡️AntiBan🛡️",
     "Exit",
 	})
 	
@@ -60,8 +73,7 @@ cm = gg.choice({
     if cm == 16 then dontres() end
     if cm == 17 then infgren() end
     if cm == 18 then GrenadeTrail() end
-    if cm == 19 then antiban() end
-    if cm == 20  then exitt() end
+    if cm == 19  then exitt() end
     end
 	
   function antiban() 
