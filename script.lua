@@ -1,10 +1,25 @@
 active = 1
 
-function menu()	
-	
+function menu()
+
 active = 0
 
 main = gg.choice({
+	"💫Cheat function💫",
+	"⭐Skinchanger⭐",
+	"🛡️Author's🛡️",
+	"Exit",
+	})
+	
+	if main == 1 then cheatmn() end
+	if main == 2 then skinmenu() end
+	if main == 3 then at() end
+	if main == 4 then exit() end
+	end
+	
+function cheatmn()		
+
+cm = gg.choice({
     "💙Damage Hack💙",
     "💙Move Before Time💙",
     "💙Team RadarHack💙",
@@ -24,27 +39,27 @@ main = gg.choice({
     "💙Infinity Grenade💙",
     "🛡️AntiBan🛡️",
     "Exit",
-	},nil, "script by @qwas_228")
+	})
 	
-    if main == 1 then dmg() end	
-    if main == 2 then mbt() end
-    if main == 3 then radar() end
-    if main == 4 then airj() end
-    if main == 5 then norecoil() end
-    if main == 6 then plant() end
-    if main == 7 then fastbomb() end
-    if main == 8 then getbomb() end
-    if main == 9 then ctbomb() end
-    if main == 10 then fastdef() end
-    if main == 11 then money() end
-    if main == 12 then resp() end
-    if main == 13 then firer() end
-    if main == 14 then infam() end
-    if main == 15 then ghost() end
-    if main == 16 then dontres() end
-    if main == 17 then infgren() end
-    if main == 18 then antiban() end
-    if main == 19  then exit() end
+    if cm == 1 then dmg() end	
+    if cm == 2 then mbt() end
+    if cm == 3 then radar() end
+    if cm == 4 then airj() end
+    if cm == 5 then norecoil() end
+    if cm == 6 then plant() end
+    if cm == 7 then fastbomb() end
+    if cm == 8 then getbomb() end
+    if cm == 9 then ctbomb() end
+    if cm == 10 then fastdef() end
+    if cm == 11 then money() end
+    if cm  == 12 then resp() end
+    if cm == 13 then firer() end
+    if cm == 14 then infam() end
+    if cm == 15 then ghost() end
+    if cm == 16 then dontres() end
+    if cm == 17 then infgren() end
+    if cm == 18 then antiban() end
+    if cm == 19  then exitt() end
     end
 	
   function antiban() 
@@ -297,8 +312,52 @@ Var #785D5944AC|785d5944ac|4|d65f03c0|0|0|0|0|r-xp|/data/app/~~J5Nbp88aYwC-U49gF
     gg.toast("Activated") 
 end
 
+function skinmenu()
+while true do
+local input = gg.prompt({
+"old skin ID",
+"new skin ID"
+}, nil, {"number", "number"})        
+if input == nil then
+return
+end
+if input[1] and input[2] then
+skinadd(input[1], input[2])
+gg.toast("changed")
+break
+else
+gg.toast("incorrect ID")
+end
+end
+end
+
+function skinadd(oldskin, newskin)
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber(oldskin, gg.TYPE_DWORD, false, gg.SIGN_EQUAL)
+gg.refineNumber(oldskin, gg.TYPE_DWORD, false, gg.SIGN_EQUAL)
+local results = gg.getResults(30)
+if #results > 0 then
+gg.editAll(newskin, gg.TYPE_DWORD)
+for i = 1, #results do
+results[i].freeze = true
+end
+gg.processResume()
+gg.toast('replaced')
+else
+gg.toast('not found')
+end
+gg.clearResults()
+end
+
+function at()
+gg.alert("qwas228 and fimozroot")
+end
+
 function exit()
 os.exit()
+end
+
+function exitt()
 end
 
 while true do
