@@ -33,7 +33,7 @@ main = gg.choice({
 	
 function cheatmn()		
 
-cm = gg.choice({
+cm = gg.multiChoice({
     "💙Damage Hack💙",
     "💙Move Before Time💙",
     "💙Team RadarHack💙",
@@ -53,28 +53,30 @@ cm = gg.choice({
     "💙Infinity Grenade(lobby)💙",
     "💙Grenade Trail(lobby)💙",
     "Exit",
-	})
-	
-    if cm == 1 then dmg() end	
-    if cm == 2 then mbt() end
-    if cm == 3 then radar() end
-    if cm == 4 then airj() end
-    if cm == 5 then norecoil() end
-    if cm == 6 then plant() end
-    if cm == 7 then fastbomb() end
-    if cm == 8 then getbomb() end
-    if cm == 9 then ctbomb() end
-    if cm == 10 then fastdef() end
-    if cm == 11 then money() end
-    if cm  == 12 then resp() end
-    if cm == 13 then firer() end
-    if cm == 14 then infam() end
-    if cm == 15 then ghost() end
-    if cm == 16 then dontres() end
-    if cm == 17 then infgren() end
-    if cm == 18 then GrenadeTrail() end
-    if cm == 19  then exitt() end
-    end
+})
+
+if cm ~= nil then
+    if cm[1] then dmg() end	
+    if cm[2] then mbt() end
+    if cm[3] then radar() end
+    if cm[4] then airj() end
+    if cm[5] then norecoil() end
+    if cm[6] then plant() end
+    if cm[7] then fastbomb() end
+    if cm[8] then ctbomb() end
+    if cm[9] then fastdef() end
+    if cm[10] then getbomb() end
+    if cm[11] then money() end
+    if cm[12] then resp() end
+    if cm[13] then firer() end
+    if cm[14] then infam() end
+    if cm[15] then ghost() end
+    if cm[16] then dontres() end
+    if cm[17] then infgren() end
+    if cm[18] then GrenadeTrail() end
+    if cm[19] then exitt() end
+end
+end
 	
   function antiban() 
     io.open("/sdcard/qwas","w+"):write([[
