@@ -365,22 +365,17 @@ end
 
 function skinadd(oldskin, newskin)
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber(oldskin, gg.TYPE_DWORD, false, gg.SIGN_EQUAL)
-gg.refineNumber(oldskin, gg.TYPE_DWORD, false, gg.SIGN_EQUAL)
-local results = gg.getResults(30)
-if #results > 0 then
-gg.editAll(newskin, gg.TYPE_DWORD)
-for i = 1, #results do
-results[i].freeze = true
-end
-gg.processResume()
-gg.toast('replaced')
-else
-gg.toast('not found')
-end
-gg.clearResults()
-end
-
+    gg.searchNumber(oldskin, gg.TYPE_DWORD, false, gg.SIGN_EQUAL)
+    gg.refineNumber(oldskin, gg.TYPE_DWORD, false, gg.SIGN_EQUAL)
+    local results = gg.getResults(30)
+    if #results > 0 then
+        gg.editAll(newskin, gg.TYPE_DWORD)
+        gg.toast("replaced")
+    else
+        gg.toast("not found")
+    end
+    gg.clearResults()
+	end
 function at()
 gg.alert("qwas228 and fimozroot")
 end
